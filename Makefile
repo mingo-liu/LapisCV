@@ -29,6 +29,9 @@ all: obsidian typora vscode
 obsidian:
 	@mkdir -p $(OBSIDIAN_DIR)
 	@cp -r $(OBSIDIAN_TEMPLATE_DIR). $(OBSIDIAN_DIR)
+	@: > $(OBSIDIAN_DIR)/.obsidian/snippets/lapis-cv.css
+	@: > $(OBSIDIAN_DIR)/.obsidian/snippets/lapis-cv-serif.css
+	@cp fonts/IONICONS-LICENSE.txt $(OBSIDIAN_DIR)/IONICONS-LICENSE.txt
 	@set -- $(OBSIDIAN_FILES); \
 	while [ "$$#" -gt 0 ]; do \
 		src=$$1; \
@@ -48,7 +51,12 @@ typora:
 		src=$$1; \
 		dest=$$2; \
 		mkdir -p $$(dirname $$dest); \
-		cp -r $$src $$dest; \
+		if [ -d "$$src" ]; then \
+			mkdir -p "$$dest"; \
+			cp -R "$$src/." "$$dest/"; \
+		else \
+			cp "$$src" "$$dest"; \
+		fi; \
 		shift 2; \
 	done
 
@@ -60,7 +68,12 @@ vscode:
 		src=$$1; \
 		dest=$$2; \
 		mkdir -p $$(dirname $$dest); \
-		cp -r $$src $$dest; \
+		if [ -d "$$src" ]; then \
+			mkdir -p "$$dest"; \
+			cp -R "$$src/." "$$dest/"; \
+		else \
+			cp "$$src" "$$dest"; \
+		fi; \
 		shift 2; \
 	done
 
