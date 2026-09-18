@@ -139,6 +139,7 @@
 | <img src="docs/assets/426660010-0260e833-0461-483d-94af-595e76385645.png" width="32"/> | `&#xe8b4;` | <img src="docs/assets/426660041-8a59848f-db0a-494b-8966-13625e2a7d72.png" width="32"/> | `&#xe603;` |
 | <img src="docs/assets/426660098-2c7b7f72-ed79-43cc-b238-c9ed2b6bcbc4.png" width="32"/> | `&#xe8b5;` | <img src="docs/assets/426660142-2349f66c-962b-4351-89dc-2d8e2e123c6e.png" width="32"/> | `&#xe638;` |
 | <img src="docs/assets/426660178-7f4d80ce-cc50-4683-aa74-b5aca8b9da6e.png" width="32"/> | `&#xe635;` | <img src="docs/assets/426660228-70b78f69-09be-4a44-b6ed-97be9420c2d1.png" width="32"/> | `&#xe673;` |
+| <img src="docs/assets/icon-wechat.png" width="32" alt="微信"/> | `&#xe601;` | | |
 
 </details>
 
